@@ -17,9 +17,9 @@ export const AnalogCalorieGauge: React.FC<AnalogCalorieGaugeProps> = ({ consumed
   const needleAngle = -90 + clampedRatio * 180;
 
   return (
-    <div className="relative mx-auto w-full max-w-[340px] p-2">
+    <div className="relative mx-auto w-full max-w-[236px] p-0.5">
       {/* Brass Bezel Frame */}
-      <div className="brass-bezel-recessed rounded-full p-4 relative overflow-hidden aspect-square flex flex-col items-center justify-center">
+      <div className="brass-bezel-recessed rounded-full p-2.5 relative overflow-hidden aspect-square flex flex-col items-center justify-center">
         {/* Anti-reflective curved glass highlight reflection */}
         <div 
           className="absolute inset-0 pointer-events-none rounded-full"
@@ -35,7 +35,7 @@ export const AnalogCalorieGauge: React.FC<AnalogCalorieGaugeProps> = ({ consumed
         <div className="brass-rivet absolute right-2 top-1/2 -translate-y-1/2" />
 
         {/* Gauge SVG Dial Face */}
-        <svg viewBox="0 0 200 120" className="w-full mt-2 overflow-visible">
+        <svg viewBox="0 0 200 120" className="w-full mt-1 overflow-visible">
           <defs>
             <linearGradient id="greenArc" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#1e824c" />
@@ -141,21 +141,21 @@ export const AnalogCalorieGauge: React.FC<AnalogCalorieGaugeProps> = ({ consumed
         </svg>
 
         {/* Digital/Mechanical Odometer Readout Box */}
-        <div className="bg-[#0e0c0a] border border-[#553d08] rounded px-3 py-1.5 mt-[-10px] text-center shadow-inner z-10 w-44">
-          <div className="text-[10px] uppercase tracking-wider text-[#d5c4a1]/70 font-mono">
+        <div className="bg-[#0e0c0a] border border-[#553d08] rounded px-2.5 py-1 mt-[-6px] text-center shadow-inner z-10 w-36">
+          <div className="text-[9px] uppercase tracking-wider text-[#d5c4a1]/70 font-mono">
             Calories Consumed
           </div>
-          <div className="text-2xl font-bold tracking-tight text-[#fcf9f1] debossed-text">
+          <div className="text-xl font-bold tracking-tight text-[#fcf9f1] debossed-text">
             {consumed.toLocaleString()}
           </div>
-          <div className="text-[11px] font-medium text-[#c89e3a] flex items-center justify-between border-t border-[#3d2b09] pt-0.5 mt-0.5">
+          <div className="text-[10px] font-medium text-[#c89e3a] flex items-center justify-between border-t border-[#3d2b09] pt-0.5 mt-0.5 whitespace-nowrap">
             <span className="text-[#9a9187]">Goal: {goal.toLocaleString()}</span>
             {isSurplus ? (
-              <span className="text-[#e74c3c] font-bold">
+              <span className="text-[#e74c3c] font-bold ml-1">
                 <span>+{surplus.toLocaleString()}</span> Surplus
               </span>
             ) : (
-              <span className="text-[#2ecc71] font-semibold">
+              <span className="text-[#2ecc71] font-semibold ml-1">
                 <span>{remaining.toLocaleString()}</span> Remaining
               </span>
             )}

@@ -50,7 +50,7 @@ export const DailyLedger: React.FC<DailyLedgerProps> = ({
             goal={settings.dailyCalorieGoal}
           />
 
-          <div className="mt-3">
+          <div className="mt-2">
             <MacroBar
               protein={totals.protein}
               carbs={totals.carbs}
