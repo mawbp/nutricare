@@ -1,7 +1,7 @@
+@import './styles/skeuomorphic.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './styles/skeuomorphic.css';
 
 @layer base {
   body {

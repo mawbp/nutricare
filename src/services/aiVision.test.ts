@@ -1,5 +1,5 @@
-import { describe, it, expect, vi } from 'vitest';
-import { analyzeFoodImage, downscaleImageBase64 } from './aiVision';
+import { describe, it, expect } from 'vitest';
+import { analyzeFoodImage } from './aiVision';
 
 describe('AI Vision Service', () => {
   const dummyBase64 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==';

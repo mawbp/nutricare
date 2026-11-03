@@ -1,7 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { 
   getAppState, 
-  saveAppState, 
   getDayLog, 
   updateWater, 
   addFoodItem, 
