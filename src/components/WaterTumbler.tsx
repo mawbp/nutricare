@@ -60,9 +60,9 @@ export const WaterTumbler: React.FC<WaterTumblerProps> = ({ currentMl, goalMl, o
       </div>
 
       {/* Main Glass Tumbler Body & Controls Row */}
-      <div className="flex items-end justify-center gap-6 my-4">
+      <div className="flex items-end justify-center gap-5 my-2">
         {/* Skeuomorphic Glass Tumbler Vessel */}
-        <div className="relative w-40 h-64 rounded-b-3xl border-x-2 border-b-8 border-white/70 bg-gradient-to-b from-white/20 via-sky-50/10 to-sky-100/30 flex flex-col justify-end shadow-2xl relative overflow-hidden backdrop-blur-[2px]">
+        <div className="relative w-36 h-56 rounded-b-3xl border-x-2 border-b-8 border-white/70 bg-gradient-to-b from-white/20 via-sky-50/10 to-sky-100/30 flex flex-col justify-end shadow-2xl relative overflow-hidden backdrop-blur-[2px]">
           {/* Glass specular rim and highlight reflection */}
           <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-white/80 via-white/40 to-white/80 rounded-t-sm shadow-xs pointer-events-none z-30" />
           <div className="absolute inset-y-0 left-2 w-3 bg-gradient-to-r from-white/40 to-transparent pointer-events-none z-30" />
