@@ -1,0 +1,255 @@
+/* ==========================================================================
+   NutriCare Skeuomorphic Design System — "Leather Journal & Antique Brass"
+   ========================================================================== */
+
+/* 1. Leather Binder Outer Shell */
+.leather-binder {
+  background: 
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.08), transparent 70%),
+    linear-gradient(135deg, #3d2112 0%, #261309 50%, #1a0c06 100%);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.85),
+    0 10px 20px -5px rgba(0, 0, 0, 0.6),
+    inset 0 2px 4px rgba(255, 255, 255, 0.15),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.8);
+  border: 1px solid #4a2916;
+  position: relative;
+}
+
+/* Stitched perimeter seam around the leather binder */
+.leather-stitched-border {
+  position: relative;
+}
+.leather-stitched-border::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1.5px dashed rgba(212, 163, 89, 0.55);
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* 2. Parchment Paper Sheet */
+.parchment-sheet {
+  background: 
+    radial-gradient(ellipse at 50% 20%, #ffffff 0%, #fcf9f1 65%, #f4eee1 100%);
+  box-shadow: 
+    0 8px 24px -4px rgba(0, 0, 0, 0.35),
+    0 2px 6px rgba(0, 0, 0, 0.2),
+    inset 0 0 40px rgba(180, 150, 110, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid #dfd6c3;
+  position: relative;
+}
+
+/* Aged notebook ruled lines */
+.parchment-ruled {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 27px,
+    rgba(180, 160, 130, 0.18) 28px
+  );
+}
+
+/* 3. Debossed & Embossed Letterpress Typography */
+.debossed-text {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85), 0 -1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.embossed-gold {
+  color: #c89e3a;
+  text-shadow: 
+    0 1px 0 #fdf0a6,
+    0 -1px 0 #553d08,
+    0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.ink-stamped {
+  font-family: 'Caveat', cursive, sans-serif;
+  color: #2c2724;
+  text-shadow: 0 0 1px rgba(44, 39, 36, 0.3);
+}
+
+/* 4. Antique Brass Plates & Bezels */
+.brass-plate {
+  background: linear-gradient(180deg, #fdf0a6 0%, #d4af37 25%, #c89e3a 65%, #7a5814 100%);
+  border: 1px solid #5a3f0d;
+  box-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.brass-bezel-recessed {
+  background: radial-gradient(circle at 50% 40%, #1f1b18 0%, #12100e 100%);
+  border: 4px solid #b88e2c;
+  box-shadow: 
+    inset 0 6px 12px rgba(0, 0, 0, 0.8),
+    0 4px 10px rgba(0, 0, 0, 0.5),
+    0 0 0 1px #5a3f0d,
+    0 0 0 2px #fdf0a6;
+}
+
+/* Brass Rivet / Screw */
+.brass-rivet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fdf0a6 0%, #c89e3a 50%, #4a340b 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), inset 0 0.5px 0.5px rgba(255, 255, 255, 0.8);
+  border: 0.5px solid #3d2b09;
+}
+
+/* 5. Tactile Push Buttons */
+.brass-btn {
+  background: linear-gradient(180deg, #fae596 0%, #d4af37 30%, #c89e3a 70%, #8c6717 100%);
+  border: 1px solid #5a3f0d;
+  color: #2b1807;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255, 245, 180, 0.75);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.4),
+    0 2px 4px -1px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.35);
+  transition: all 0.1s ease;
+  user-select: none;
+}
+.brass-btn:hover {
+  filter: brightness(1.05);
+}
+.brass-btn:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    inset 0 2px 5px rgba(0, 0, 0, 0.6),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.brass-btn-secondary {
+  background: linear-gradient(180deg, #f4eee1 0%, #e2d5bd 50%, #cbb998 100%);
+  border: 1px solid #8e7a5b;
+  color: #382c1b;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.25);
+  transition: all 0.1s ease;
+}
+.brass-btn-secondary:active {
+  transform: translateY(1.5px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+/* 6. Skeuomorphic Glass Tumbler & Fluid Dynamics */
+.water-glass-vibe {
+  background: linear-gradient(
+    90deg, 
+    rgba(255, 255, 255, 0.35) 0%, 
+    rgba(255, 255, 255, 0.08) 15%, 
+    rgba(255, 255, 255, 0.02) 50%, 
+    rgba(255, 255, 255, 0.08) 85%, 
+    rgba(255, 255, 255, 0.35) 100%
+  );
+  border-left: 2px solid rgba(255, 255, 255, 0.6);
+  border-right: 2px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.3),
+    inset 0 0 15px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(1.5px);
+  position: relative;
+  overflow: hidden;
+}
+
+.water-fluid {
+  background: linear-gradient(180deg, #38d6ea 0%, #1b9cfc 40%, #1e52cf 100%);
+  box-shadow: 0 0 20px rgba(56, 214, 234, 0.4);
+  transition: height 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.water-meniscus {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: radial-gradient(ellipse at 50% 50%, #a2f2fb 0%, #38d6ea 80%);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+/* 7. Crimson Wax Seal */
+.wax-seal {
+  background: radial-gradient(circle at 35% 35%, #b7282d 0%, #901a1e 60%, #5e0d10 100%);
+  border: 1.5px solid #45080a;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.5),
+    inset 0 2px 2px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.6);
+  position: relative;
+  border-radius: 50%;
+}
+.wax-seal::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* 8. Polaroid Photo Frame */
+.polaroid-frame {
+  background: #fbf9f4;
+  padding: 10px 10px 28px 10px;
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.4),
+    0 2px 6px rgba(0, 0, 0, 0.2),
+    inset 0 0 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2ddd3;
+  transition: transform 0.2s ease;
+}
+
+/* 9. Recipe Index Card */
+.recipe-card {
+  background: #ffffff;
+  box-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    inset 0 0 20px rgba(210, 195, 170, 0.1);
+  border: 1px solid #e7dfce;
+  border-left: 3px solid #c89e3a;
+}
+
+/* 10. Brass Paperclip Accent */
+.paperclip {
+  width: 14px;
+  height: 36px;
+  border: 2px solid #b88e2c;
+  border-radius: 8px;
+  position: absolute;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  background: transparent;
+}
+
+/* Custom Scrollbars for Parchment */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4eee1;
+  border-left: 1px solid #dfd6c3;
+}
+::-webkit-scrollbar-thumb {
+  background: #c89e3a;
+  border-radius: 4px;
+  border: 1px solid #7a5814;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b88e2c;
+}
