@@ -32,7 +32,7 @@ export const WaterTumbler: React.FC<WaterTumblerProps> = ({ currentMl, goalMl, o
   ];
 
   return (
-    <div className="w-full bg-[#fcf9f1] p-4 rounded-xl border border-[#dfd6c3] shadow-md parchment-sheet relative overflow-hidden">
+    <div className="w-full h-full bg-[#fcf9f1] p-4 rounded-xl border border-[#dfd6c3] shadow-md parchment-sheet relative overflow-hidden flex flex-col justify-between">
       {/* Header with Title and Volume */}
       <div className="flex items-center justify-between mb-4 pb-2 border-b border-[#dfd6c3]">
         <div className="flex items-center gap-2">
@@ -60,21 +60,28 @@ export const WaterTumbler: React.FC<WaterTumblerProps> = ({ currentMl, goalMl, o
       </div>
 
       {/* Main Glass Tumbler Body & Controls Row */}
-      <div className="flex items-end justify-center gap-6 my-2">
+      <div className="flex items-end justify-center gap-6 my-4">
         {/* Skeuomorphic Glass Tumbler Vessel */}
-        <div className="relative w-36 h-60 water-glass-vibe rounded-b-2xl border-t border-white/40 flex flex-col justify-end shadow-2xl">
-          {/* Calibrated Tick Marks on Glass */}
-          <div className="absolute inset-y-2 left-2 flex flex-col justify-between pointer-events-none z-20 text-[9px] font-mono text-[#4a340b]/70 font-semibold select-none">
+        <div className="relative w-40 h-64 rounded-b-3xl border-x-2 border-b-8 border-white/70 bg-gradient-to-b from-white/20 via-sky-50/10 to-sky-100/30 flex flex-col justify-end shadow-2xl relative overflow-hidden backdrop-blur-[2px]">
+          {/* Glass specular rim and highlight reflection */}
+          <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-white/80 via-white/40 to-white/80 rounded-t-sm shadow-xs pointer-events-none z-30" />
+          <div className="absolute inset-y-0 left-2 w-3 bg-gradient-to-r from-white/40 to-transparent pointer-events-none z-30" />
+          <div className="absolute inset-y-0 right-3 w-1.5 bg-gradient-to-l from-white/30 to-transparent pointer-events-none z-30" />
+
+          {/* Heavy Crystal Glass Thick Base */}
+          <div className="absolute bottom-0 inset-x-0 h-4 bg-gradient-to-t from-white/60 to-transparent pointer-events-none z-30 border-t border-white/40" />
+
+          {/* Calibrated Etched Measurement Ticks on Glass Wall */}
+          <div className="absolute inset-y-4 left-3 flex flex-col justify-between pointer-events-none z-20 text-[10px] font-mono text-[#3d2314] font-bold select-none">
             {tickMarks.map((tick, i) => (
-              <div key={i} className="flex items-center gap-1">
-                <span className="w-2.5 h-[1.5px] bg-[#3d2b09]/50 inline-block" />
-                <span>{tick.label}</span>
+              <div key={i} className="flex items-center gap-1.5">
+                <span className="w-3 h-[2px] bg-[#3d2314] shadow-[0_1px_0_rgba(255,255,255,0.8)] inline-block" />
+                <span className="text-[#3d2314] bg-white/70 px-1 py-0.2 rounded-xs shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+                  {tick.label}
+                </span>
               </div>
             ))}
           </div>
-
-          {/* Vertical Specular Glass Refraction Beam */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-transparent to-white/20 pointer-events-none z-20" />
 
           {/* Animated Water Column */}
           <div 
@@ -88,15 +95,15 @@ export const WaterTumbler: React.FC<WaterTumblerProps> = ({ currentMl, goalMl, o
             {fillPct > 10 && (
               <>
                 <div 
-                  className="absolute bottom-2 left-1/4 w-2 h-2 rounded-full bg-white/60 animate-bounce"
+                  className="absolute bottom-2 left-1/4 w-2 h-2 rounded-full bg-white/70 animate-bounce"
                   style={{ animationDuration: '2s' }}
                 />
                 <div 
-                  className="absolute bottom-6 right-1/3 w-1.5 h-1.5 rounded-full bg-white/50 animate-bounce"
+                  className="absolute bottom-6 right-1/3 w-1.5 h-1.5 rounded-full bg-white/60 animate-bounce"
                   style={{ animationDuration: '1.4s' }}
                 />
                 <div 
-                  className="absolute bottom-12 left-1/2 w-1 h-1 rounded-full bg-white/70 animate-bounce"
+                  className="absolute bottom-12 left-1/2 w-1 h-1 rounded-full bg-white/80 animate-bounce"
                   style={{ animationDuration: '2.5s' }}
                 />
               </>
@@ -105,40 +112,40 @@ export const WaterTumbler: React.FC<WaterTumblerProps> = ({ currentMl, goalMl, o
         </div>
 
         {/* Quick Add Brass Action Buttons */}
-        <div className="flex flex-col gap-2.5 justify-end">
+        <div className="flex flex-col gap-2 justify-end w-40">
           <button
             type="button"
             onClick={() => handleAction(250)}
-            className="brass-btn px-3 py-2 rounded-lg text-xs flex items-center gap-1.5 active:scale-95"
+            className="brass-btn px-3 py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-md active:scale-95"
           >
-            <Plus className="w-3.5 h-3.5 text-[#5a3f0d]" />
+            <Plus className="w-4 h-4 text-[#5a3f0d]" />
             <span>+250ml (Cup)</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleAction(500)}
-            className="brass-btn px-3 py-2 rounded-lg text-xs flex items-center gap-1.5 active:scale-95"
+            className="brass-btn px-3 py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-md active:scale-95"
           >
-            <Plus className="w-3.5 h-3.5 text-[#5a3f0d]" />
+            <Plus className="w-4 h-4 text-[#5a3f0d]" />
             <span>+500ml (Bottle)</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleAction(100)}
-            className="brass-btn-secondary px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 active:scale-95"
+            className="brass-btn-secondary px-3 py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 active:scale-95"
           >
-            <Plus className="w-3 h-3 text-[#52301c]" />
+            <Plus className="w-3.5 h-3.5 text-[#52301c]" />
             <span>+100ml (Sip)</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleAction(-250)}
-            className="brass-btn-secondary px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 text-[#962d22] active:scale-95 mt-1"
+            className="brass-btn-secondary px-3 py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 text-[#962d22] active:scale-95 mt-1 border-[#b7282d]/30 hover:border-[#b7282d]/60"
           >
-            <Minus className="w-3 h-3" />
+            <Minus className="w-3.5 h-3.5" />
             <span>-250ml (Undo)</span>
           </button>
         </div>

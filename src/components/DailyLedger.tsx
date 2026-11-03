@@ -37,7 +37,7 @@ export const DailyLedger: React.FC<DailyLedgerProps> = ({
       {/* Top Nutrition & Hydration Gauges Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
         {/* Analog Calorie Dial & Macro Card */}
-        <div className="parchment-sheet p-4 rounded-xl border border-[#dfd6c3] shadow-md flex flex-col justify-between">
+        <div className="parchment-sheet p-4 rounded-xl border border-[#dfd6c3] shadow-md flex flex-col justify-between h-full">
           <div className="text-center pb-1">
             <h3 className="font-bold text-[#3d2314] text-base tracking-wide debossed-text">
               Caloric Pressure Meter

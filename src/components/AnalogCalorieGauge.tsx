@@ -106,6 +106,11 @@ export const AnalogCalorieGauge: React.FC<AnalogCalorieGaugeProps> = ({ consumed
             );
           })}
 
+          {/* Tick Numeric Text Labels */}
+          <text x="24" y="112" fill="#c89e3a" fontSize="8" fontWeight="bold" fontFamily="monospace" textAnchor="middle">0</text>
+          <text x="100" y="24" fill="#c89e3a" fontSize="8" fontWeight="bold" fontFamily="monospace" textAnchor="middle">50%</text>
+          <text x="176" y="112" fill="#c89e3a" fontSize="8" fontWeight="bold" fontFamily="monospace" textAnchor="middle">100%</text>
+
           {/* Rotating Brass Needle */}
           <g 
             style={{

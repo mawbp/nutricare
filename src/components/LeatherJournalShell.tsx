@@ -123,9 +123,13 @@ export const LeatherJournalShell: React.FC<LeatherJournalShellProps> = ({
                 <ChevronLeft className="w-4 h-4" />
               </button>
 
-              <span className="px-2 text-xs font-serif font-bold text-[#fdf0a6] min-w-[120px] text-center">
-                {formattedDateString}
-                {isToday && <span className="ml-1 text-[10px] text-[#2ecc71]">(Today)</span>}
+              <span className="px-2 text-xs font-serif font-bold text-[#fdf0a6] min-w-[130px] text-center flex items-center justify-center gap-1.5">
+                <span>{formattedDateString}</span>
+                {isToday && (
+                  <span className="text-[9px] font-sans text-[#fdf0a6] bg-[#5a3f0d]/80 border border-[#c89e3a]/50 px-1.5 py-0.2 rounded-full font-bold">
+                    Today
+                  </span>
+                )}
               </span>
 
               <button
