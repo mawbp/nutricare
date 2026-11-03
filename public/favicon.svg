@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="brassGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fdf0a6"/>
+      <stop offset="40%" stop-color="#d4af37"/>
+      <stop offset="85%" stop-color="#aa7c11"/>
+      <stop offset="100%" stop-color="#553d08"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <circle cx="50" cy="50" r="44" fill="url(#brassGrad)" filter="url(#shadow)" stroke="#3d2b09" stroke-width="2"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="#fdf0a6" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <path d="M50 25 C36 25 32 40 32 54 C32 68 42 75 50 75 C58 75 68 68 68 54 C68 40 64 25 50 25 Z" fill="#2c180e" opacity="0.85"/>
+  <path d="M50 32 C53 45 52 60 50 68" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+</svg>
